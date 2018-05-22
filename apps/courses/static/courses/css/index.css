@@ -1,0 +1,22 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.userform{
+    width: 800px;
+    height: 200px;
+    display: inline-block;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.coursesTable{
+    width: 800px;
+    height: 600px;
+    display: inline-block;
+    background-color: lightblue;
+}
+

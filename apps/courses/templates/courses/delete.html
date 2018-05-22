@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'courses/css/delete.css' %}">
+
+</head>
+<body>
+    <h1>Are you sure you want to delete the following course?</h1>
+    <div class="sure">
+        <p>Name:{{course.name}}</p>
+        <p>Description:{{course.desc}}</p>
+    </div>
+    <a href="/"><button>No</button></a>
+    <form action='/delete/{{course.id}}' method='POST'>
+        {% csrf_token %}
+        <button>Yes! Delete it</button>
+    </form>
+</body>
+</html>
